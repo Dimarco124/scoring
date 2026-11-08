@@ -715,3 +715,27 @@ Résolution immédiate des deux points demandés :
    - Les 11 variables du modèle (`age`, `sexe`, `ville`, `activite`, `revenu_mensuel_estime_fcfa`, `anciennete_mobile_money_mois`, `volume_mm_mensuel_fcfa`, `factures_cie_sodeci_payees_pct`, `nb_credits_anterieurs`, `montant_demande_fcfa`, `duree_mois`) ne comportent aucun taux d'intérêt.
 2. **Explication technique :**
    - Dans le portefeuille historique de la microfinance ayant servi à l'apprentissage (1 200 dossiers), le taux d'intérêt était institutionnel et uniforme (une constante). Le couple `(montant_demande_fcfa, duree_mois)` combiné au revenu suffit mathématiquement à l'algorithme pour évaluer la charge de remboursement et le risque de défaut.
+
+---
+
+## Échange 38 — Déploiement et publication du projet sur GitHub pour collaboration
+
+### Questions posées :
+> *« je veux envoyer tout le dossier Projet-scoring sur git afin que ma camarade puisse prendre le projet et continuer tranquillement, que dois-je faire »*
+
+### Réponse donnée :
+1. **Mise en place d'un `.gitignore` professionnel à la racine :**
+   - Exclusion stricte de `frontend-web/node_modules/` (plus de 5 800 fichiers de dépendances évitant d'alourdir le dépôt ou d'atteindre les limites de taille GitHub).
+   - Exclusion de `backend-laravel/vendor/`, des fichiers locaux d'environnement secrets (`.env`), des caches Python (`__pycache__`) et des checkpoints Jupyter.
+2. **Création du fichier `requirements.txt` :**
+   - Spécification des packages Python nécessaires pour le modèle de Machine Learning (`scikit-learn`, `pandas`, `numpy`, `joblib`, `matplotlib`, `seaborn`, `notebook`).
+3. **Rédaction d'un guide complet dans `README.md` :**
+   - Architecture détaillée du projet (Backend, Frontend, Mobile, Machine Learning, Données).
+   - Guide pas-à-pas pour la camarade :
+     - Clonage du dépôt (`git clone https://github.com/Dimarco124/scoring.git`).
+     - Installation et démarrage du backend Laravel (`composer install`, `php artisan migrate --seed`, `php artisan serve`).
+     - Installation et démarrage du frontend React (`npm install`, `npm run dev`).
+     - Installation des dépendances Python (`pip install -r requirements.txt`).
+     - Identifiants par défaut (`admin` / `admin123` et `konan` / `agent123`).
+4. **Push officiel vers GitHub :**
+   - Commit propre (`feat: projet complet scoring microfinance UIYA`) et publication réussie sur la branche principale `main` : `https://github.com/Dimarco124/scoring.git`.
