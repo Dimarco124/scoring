@@ -1,0 +1,487 @@
+/* ==========================================================================
+   STYLE GLOBAL & DESIGN SYSTEM CHALEUREUX HARMONISÉ AVEC L'IMAGE
+   Couleur Principale : #B45309 (Ambre Doré / Cognac Chêne Boisé)
+   Police d'Écriture Globale : 'Varela Round', sans-serif
+   Comportement : Tiroir 3D Flottant avec flottaison en verre sur l'image
+   ========================================================================== */
+
+:root {
+  --primary: #B45309;          /* Ambre Doré / Cognac Chêne */
+  --primary-hover: #92400E;    /* Ambre Foncé */
+  --primary-subtle: #FFFBEB;   /* Crème Dorée Ambrée */
+  --primary-border: #FDE68A;   /* Bordure Ambre Douce */
+  --primary-glow: rgba(180, 83, 9, 0.25);
+
+  --slate-900: #18181B;        /* Anthracite Chaud */
+  --slate-800: #27272A;
+  --slate-700: #3F3F46;
+  --slate-600: #52525B;
+  --slate-500: #71717A;
+  --slate-400: #A1A1AA;
+  --slate-300: #D4D4D8;
+  --slate-200: #E4E4E7;
+  --slate-100: #F4F4F5;
+  --slate-50:  #FAF8F5;        /* Fond Ivoire Chaud */
+
+  --emerald-600: #0D7A4D;
+  --emerald-500: #10B981;
+  --emerald-50:  #ECFDF5;
+
+  --amber-600: #D97706;
+  --amber-500: #F59E0B;
+  --amber-50:  #FFFBEB;
+
+  --rose-600: #E11D48;
+  --rose-500: #F43F5E;
+  --rose-50:  #FFF1F2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Varela Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--slate-800);
+  background-color: #0c0a09;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, button, input, select, textarea, label {
+  font-family: 'Varela Round', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Varela Round', sans-serif !important;
+  letter-spacing: -0.01em;
+}
+
+.font-mono, code, pre, kbd {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   PAGE DE CONNEXION CINÉMATIQUE (HARMONISÉE AVEC L'IMAGE)
+   ========================================================================== */
+.login-cinematic-wrapper {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #FAF8F5;
+  overflow-y: auto;
+}
+
+@media (min-width: 1024px) {
+  .login-cinematic-wrapper {
+    flex-direction: row;
+    overflow: hidden;
+  }
+}
+
+.login-cinematic-left {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem;
+  color: #ffffff;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .login-cinematic-left {
+    width: 41.666667%;
+    min-height: 100vh;
+    padding: 3rem;
+  }
+}
+
+.login-cinematic-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.95) contrast(1.05);
+  z-index: 1;
+}
+
+.login-cinematic-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(24, 24, 27, 0.70) 0%, rgba(69, 26, 3, 0.48) 55%, rgba(180, 83, 9, 0.20) 100%);
+  backdrop-filter: blur(0px);
+  z-index: 2;
+}
+
+.login-cinematic-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #FAF8F5;
+  overflow-y: auto;
+}
+
+@media (min-width: 1024px) {
+  .login-cinematic-right {
+    width: 58.333333%;
+    padding: 3.5rem;
+  }
+}
+
+/* ==========================================================================
+   COMPORTEMENT 3D OFF-CANVAS SURFACE
+   ========================================================================== */
+.app-surface-transition {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              border-radius 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: left center;
+  will-change: transform, border-radius;
+}
+
+#app-surface {
+  background-color: #ffffff !important;
+}
+
+.app-surface-open {
+  transform: translateX(315px) scale(0.86);
+  border-radius: 36px !important;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.35) !important;
+  overflow: hidden;
+  filter: none !important;
+  opacity: 1 !important;
+  background-color: #ffffff !important;
+}
+
+#app-surface-overlay {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+@media (max-width: 640px) {
+  .app-surface-open {
+    transform: translateX(290px) scale(0.88);
+    border-radius: 28px !important;
+  }
+}
+
+/* ==========================================================================
+   CARTES PREMIUM ET COMPOSANTS
+   ========================================================================== */
+.premium-card {
+  background: #ffffff;
+  border: 1px solid rgba(228, 228, 231, 0.90);
+  border-radius: 22px;
+  box-shadow: 0 4px 20px -2px rgba(24, 24, 27, 0.04), 0 2px 6px -1px rgba(24, 24, 27, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-card:hover {
+  box-shadow: 0 12px 28px -4px rgba(24, 24, 27, 0.07), 0 4px 12px -2px rgba(24, 24, 27, 0.03);
+}
+
+/* ==========================================================================
+   BOUTONS ET BADGES
+   ========================================================================== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 14px;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(180, 83, 9, 0.28);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(180, 83, 9, 0.36);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background-color: #ffffff;
+  color: var(--slate-700);
+  font-size: 12.5px;
+  font-weight: 700;
+  border: 1px solid var(--slate-200);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-white:hover:not(:disabled) {
+  background-color: #FFFBEB;
+  border-color: #FDE68A;
+  color: var(--primary);
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Badges de risque & statut */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  border: 1px solid transparent;
+  white-space: nowrap !important;
+}
+
+.badge-faible {
+  background: var(--emerald-50);
+  color: var(--emerald-600);
+  border-color: #A7F3D0;
+}
+
+.badge-moyen {
+  background: var(--amber-50);
+  color: var(--amber-600);
+  border-color: #FDE68A;
+}
+
+.badge-eleve {
+  background: var(--rose-50);
+  color: var(--rose-600);
+  border-color: #FECACA;
+}
+
+.badge-encours {
+  background: #FFFBEB;
+  color: #B45309;
+  border-color: #FDE68A;
+}
+
+.badge-neutral {
+  background: #F4F4F5;
+  color: #52525B;
+  border-color: #E4E4E7;
+}
+
+/* ==========================================================================
+   INPUTS ET FORMULAIRES
+   ========================================================================== */
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--slate-200);
+  background-color: #ffffff;
+  color: var(--slate-800);
+  font-size: 13.5px;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3.5px rgba(180, 83, 9, 0.15);
+}
+
+/* ==========================================================================
+   TABLEAUX HAUT DE GAMME (STYLE CHALEUREUX & ERGONOMIQUE)
+   ========================================================================== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid rgba(228, 228, 231, 0.85);
+  margin-top: 10px;
+}
+
+.table-responsive::-webkit-scrollbar,
+.overflow-x-auto::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track,
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #FAF8F5;
+  border-radius: 999px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb,
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #D4D4D8;
+  border-radius: 999px;
+  border: 2px solid #FAF8F5;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover,
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: #B45309;
+}
+
+.custom-table {
+  width: 100%;
+  min-width: max-content;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 12.5px;
+  text-align: left;
+}
+
+.custom-table thead {
+  background-color: #FAF8F5;
+}
+
+.custom-table th {
+  text-align: left;
+  padding: 13px 18px;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #52525B;
+  background-color: #FAF8F5;
+  border-top: 1px solid #E4E4E7;
+  border-bottom: 1px solid #E4E4E7;
+  white-space: nowrap !important;
+}
+
+.custom-table th:first-child {
+  border-left: 1px solid #E4E4E7;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.custom-table th:last-child {
+  border-right: 1px solid #E4E4E7;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.custom-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #F4F4F5;
+  color: #18181B;
+  vertical-align: middle;
+  white-space: nowrap !important;
+  font-variant-numeric: tabular-nums;
+}
+
+.custom-table th *,
+.custom-table td * {
+  white-space: nowrap !important;
+}
+
+.custom-table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: rgba(250, 248, 245, 0.45);
+}
+
+.custom-table tbody tr:hover {
+  background-color: rgba(254, 243, 199, 0.50) !important;
+}
+
+.custom-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Scrollbar discrète */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+/* ==========================================================================
+   IMPRESSION RAPPORT BF16
+   ========================================================================== */
+@media print {
+  body, html, #root {
+    height: auto !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+  }
+  aside, .no-print, #app-surface-overlay {
+    display: none !important;
+  }
+  #app-surface {
+    position: static !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    height: auto !important;
+    background: #ffffff !important;
+  }
+  .page-scroll-area {
+    overflow: visible !important;
+    height: auto !important;
+  }
+  .premium-card {
+    box-shadow: none !important;
+    border: 1px solid #d4d4d8 !important;
+  }
+}

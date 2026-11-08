@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" fill="none">
+  <defs>
+    <linearGradient id="bgGlow" x1="0" y1="0" x2="680" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EFF6FF" />
+      <stop offset="55%" stop-color="#F0FDF4" />
+      <stop offset="100%" stop-color="#FEF3C7" stop-opacity="0.55" />
+    </linearGradient>
+    <linearGradient id="navyCard" x1="0" y1="0" x2="360" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E3A8A" />
+    </linearGradient>
+    <linearGradient id="gaugeArc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="45%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0F172A" flood-opacity="0.10" />
+    </filter>
+  </defs>
+
+  <!-- Soft organic background shape -->
+  <path d="M75 70 C190 10, 490 15, 595 85 C675 140, 665 320, 575 380 C465 440, 195 435, 90 375 C10 325, 5 130, 75 70 Z" fill="url(#bgGlow)" />
+
+  <!-- Top Institutional Connectors -->
+  <line x1="250" y1="75" x2="250" y2="125" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5 5" />
+  <line x1="410" y1="75" x2="410" y2="125" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5 5" />
+  <line x1="250" y1="75" x2="410" y2="75" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5 5" />
+
+  <!-- Bank / Microfinance Pillar Icon -->
+  <g filter="url(#softShadow)">
+    <circle cx="250" cy="58" r="32" fill="#1E3A8A" />
+    <path d="M234 52 L250 41 L266 52 H234 Z" fill="#FFFFFF" />
+    <rect x="237" y="55" width="4" height="13" rx="1" fill="#FFFFFF" />
+    <rect x="248" y="55" width="4" height="13" rx="1" fill="#FFFFFF" />
+    <rect x="259" y="55" width="4" height="13" rx="1" fill="#FFFFFF" />
+    <rect x="233" y="70" width="34" height="4" rx="1.5" fill="#38BDF8" />
+  </g>
+
+  <!-- Security / Trust Shield Icon -->
+  <g filter="url(#softShadow)">
+    <circle cx="410" cy="58" r="32" fill="#0D9488" />
+    <path d="M410 38 L426 44 V56 C426 67 419 74 410 78 C401 74 394 67 394 56 V44 L410 38 Z" fill="#FFFFFF" fill-opacity="0.2" stroke="#FFFFFF" stroke-width="2.5" />
+    <path d="M403 58 L408 63 L418 52" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Main Laptop / Analytics Dashboard Card -->
+  <g filter="url(#softShadow)">
+    <rect x="95" y="122" width="350" height="236" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+    <!-- Top browser bar -->
+    <rect x="95" y="122" width="350" height="32" rx="16" fill="url(#navyCard)" />
+    <rect x="95" y="138" width="350" height="16" fill="url(#navyCard)" />
+    <circle cx="115" cy="138" r="4.5" fill="#F87171" />
+    <circle cx="130" cy="138" r="4.5" fill="#FBBF24" />
+    <circle cx="145" cy="138" r="4.5" fill="#34D399" />
+    <text x="170" y="142" fill="#E2E8F0" font-family="Inter, sans-serif" font-size="10" font-weight="600">UIYA FinScore • Analyse IA v1.0.0</text>
+
+    <!-- Gauge Section -->
+    <path d="M 140 245 A 55 55 0 0 1 250 245" stroke="#F1F5F9" stroke-width="14" stroke-linecap="round" fill="none" />
+    <path d="M 140 245 A 55 55 0 0 1 238 212" stroke="url(#gaugeArc)" stroke-width="14" stroke-linecap="round" fill="none" />
+    <text x="195" y="236" text-anchor="middle" fill="#0F172A" font-family="Plus Jakarta Sans, sans-serif" font-size="30" font-weight="800">760</text>
+    <text x="195" y="254" text-anchor="middle" fill="#059669" font-family="Inter, sans-serif" font-size="11" font-weight="700">Risque Faible • /1000</text>
+
+    <!-- Mini bar chart below gauge -->
+    <rect x="135" y="305" width="16" height="26" rx="4" fill="#93C5FD" />
+    <rect x="160" y="290" width="16" height="41" rx="4" fill="#3B82F6" />
+    <rect x="185" y="276" width="16" height="55" rx="4" fill="#1D4ED8" />
+    <rect x="210" y="296" width="16" height="35" rx="4" fill="#0D9488" />
+    <rect x="235" y="282" width="16" height="49" rx="4" fill="#10B981" />
+
+    <!-- Right Checklist Panel inside Dashboard -->
+    <rect x="275" y="168" width="152" height="170" rx="12" fill="#F8FAFC" stroke="#E2E8F0" />
+    <!-- Item 1 -->
+    <circle cx="295" cy="193" r="10" fill="#D1FAE5" />
+    <path d="M291 193 L294 196 L300 190" stroke="#059669" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="312" y="197" fill="#1E293B" font-family="Inter, sans-serif" font-size="12" font-weight="600">Revenus FCFA</text>
+
+    <!-- Item 2 -->
+    <circle cx="295" cy="228" r="10" fill="#D1FAE5" />
+    <path d="M291 228 L294 231 L300 225" stroke="#059669" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="312" y="232" fill="#1E293B" font-family="Inter, sans-serif" font-size="12" font-weight="600">Mobile Money</text>
+
+    <!-- Item 3 -->
+    <circle cx="295" cy="263" r="10" fill="#D1FAE5" />
+    <path d="M291 263 L294 266 L300 260" stroke="#059669" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="312" y="267" fill="#1E293B" font-family="Inter, sans-serif" font-size="12" font-weight="600">CIE / SODECI</text>
+
+    <!-- Item 4 -->
+    <circle cx="295" cy="298" r="10" fill="#DBEAFE" />
+    <path d="M291 298 L294 301 L300 295" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="312" y="302" fill="#1E293B" font-family="Inter, sans-serif" font-size="12" font-weight="600">Aide Décision</text>
+  </g>
+
+  <!-- Mobile Application Card (Right Side - BF20) -->
+  <g filter="url(#softShadow)">
+    <rect x="475" y="95" width="142" height="272" rx="24" fill="#0F172A" />
+    <rect x="483" y="105" width="126" height="252" rx="18" fill="#FFFFFF" />
+    <!-- Top speaker notch -->
+    <rect x="526" y="112" width="40" height="5" rx="2.5" fill="#CBD5E1" />
+    <!-- Mobile Header -->
+    <rect x="493" y="128" width="106" height="44" rx="10" fill="#EFF6FF" />
+    <circle cx="514" cy="150" r="12" fill="#2563EB" />
+    <circle cx="514" cy="146" r="4" fill="#FFFFFF" />
+    <path d="M506 157 C508 152, 520 152, 522 157" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" />
+    <rect x="533" y="141" width="54" height="7" rx="3.5" fill="#1E3A8A" />
+    <rect x="533" y="153" width="38" height="6" rx="3" fill="#64748B" />
+
+    <!-- Mobile Form Rows -->
+    <rect x="493" y="184" width="106" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" />
+    <circle cx="505" cy="196" r="5" fill="#0D9488" />
+    <rect x="516" y="193" width="68" height="6" rx="3" fill="#94A3B8" />
+
+    <rect x="493" y="216" width="106" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" />
+    <circle cx="505" cy="228" r="5" fill="#2563EB" />
+    <rect x="516" y="225" width="58" height="6" rx="3" fill="#94A3B8" />
+
+    <rect x="493" y="248" width="106" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" />
+    <circle cx="505" cy="260" r="5" fill="#F59E0B" />
+    <rect x="516" y="257" width="72" height="6" rx="3" fill="#94A3B8" />
+
+    <!-- Mobile CTA Button -->
+    <rect x="493" y="292" width="106" height="32" rx="8" fill="#1E3A8A" />
+    <text x="546" y="312" text-anchor="middle" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="10" font-weight="700">Lancer Scoring</text>
+  </g>
+
+  <!-- FCFA Coin Badge (Bottom Right) -->
+  <g filter="url(#softShadow)">
+    <circle cx="595" cy="368" r="36" fill="#F59E0B" stroke="#FEF3C7" stroke-width="4" />
+    <circle cx="595" cy="368" r="27" fill="#D97706" />
+    <text x="595" y="375" text-anchor="middle" fill="#FFFFFF" font-family="Plus Jakarta Sans, sans-serif" font-size="18" font-weight="800">FCFA</text>
+  </g>
+</svg>
+

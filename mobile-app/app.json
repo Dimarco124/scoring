@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "FinScore UIYA Mobile",
+    "slug": "finscore-uiya-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#1E3A8A"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1E3A8A"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
+
